@@ -1,0 +1,16 @@
+<div class="margin-selector">
+    <select (change)="getList()" [(ngModel)]="category">
+        <!-- <option disabled selected>Selecciona una categoría</option>  -->
+        <option *ngFor="let e of optionCategory" [value]="e.value">{{e.name}}</option>
+    </select>
+    <!-- <select (change)="getList()" [(ngModel)]="limit">
+        <option *ngFor="let e of optionLimit" [value]="e">{{e}}</option>
+    </select> -->
+</div>
+
+<div *ngFor="let item of items" class="card-product">
+    <img [src]="item.image" class="img-product">
+    <p>{{item.title}}</p>
+    <p>Precio: {{item.price}} €</p>
+    <a routerLink="/details/{{item['id']}}">more..</a>
+</div>
