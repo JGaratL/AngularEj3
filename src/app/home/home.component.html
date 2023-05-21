@@ -1,0 +1,13 @@
+<div class="margin-selector">
+    <select (change)="getList()" [(ngModel)]="category">
+        <option value="" disabled selected hidden>Selecciona una categoría</option>
+        <option *ngFor="let e of optionCategory" [value]="e.value">{{e.name}}</option>
+    </select>
+</div>
+
+<div *ngFor="let item of items" class="card-product">
+    <img [src]="item.image" class="img-product">
+    <p class="title-style">{{item.title}}</p>
+    <p class="price-style">Precio: {{item.price}} €</p>
+    <a class="more-style" routerLink="/details/{{item['id']}}">more..</a>
+</div>
