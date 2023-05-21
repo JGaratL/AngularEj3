@@ -1,0 +1,26 @@
+.margin-details {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.price-style {
+    font-family: fantasy;
+
+    margin: 8px;
+    font-size: 14px;
+    color: rgb(39, 39, 39);
+}
+
+.title-style {
+    font-family: fantasy;
+    font-size: 18px;
+    color: rgb(39, 39, 39);
+}
+
+.img-product {
+    width: 200px;
+    height: 200px;
+}
